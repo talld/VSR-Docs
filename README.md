@@ -1,4 +1,4 @@
-// Renderer
+# API overview
 ```c
 VSR_RendererCreateInfo* VSR_RendererGenerateCreateInfo(SDL_Window* window);
 ```
