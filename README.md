@@ -13,14 +13,14 @@ void VSR_RendererFreeCreateInfo(VSR_RendererCreateInfo* rendererCreateInfo);
 VSR_RendererCreateInfo* VSR_RendererRequestTextureCount(VSR_RendererCreateInfo* createInfo, size_t count);
 ```
 request an arbitrary size of the sampler texture array
-the sampler array is store at ```glsl layout(set = 0, binding = 0) uniform sampler2D textures[n];```  
+the sampler array is store at ```layout(set = 0, binding = 0) uniform sampler2D textures[n];```  
 returns NULL on failure
 
 ```c
 VSR_RendererCreateInfo* VSR_RendererRequestDescriptor(VSR_RendererCreateInfo* createInfo, size_t index, size_t size);
 ```
 request an arbitrary descriptor in set 1 at index of size bytes
-accessed in shaders via ```glsl layout(set = 1, binding = index)```
+accessed in shaders via ```layout(set = 1, binding = index)```
 
 ```c
 VSR_Renderer* VSR_RendererCreate(VSR_RendererCreateInfo* rendererCreateInfo);
